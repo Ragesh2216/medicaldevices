@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Devices – Stackly</title>
+  <meta name="description" content="Explore Stackly's complete range of advanced medical devices — from cardiac monitors to surgical robots. FDA approved, CE marked, ISO certified."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="preloader.css"/>
+  <link rel="stylesheet" href="devices.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>"/>
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <span class="logo-box">✚</span>
+        Stackly
+      </div>
+      <div class="preloader-spinner"></div>
+      <p class="preloader-text">Loading…</p>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar nav-dark" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">✚</span> Stackly
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"    class="nav-link">Home</a></li>
+        <li><a href="about.html"    class="nav-link">About</a></li>
+        <li><a href="devices.html"  class="nav-link active">Devices</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html"  class="nav-link">Contact</a></li>
+        <li><a href="login.html"    class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="devices-hero">
+    <div class="container dh-inner reveal">
+      <span class="badge" style="background:rgba(255,255,255,.18);color:#fff;margin-bottom:20px;">🩺 120+ Certified Devices</span>
+      <h1>Our <span>Medical Devices</span><br/>Built for Precision</h1>
+      <p>FDA-approved, CE-marked, and ISO 13485 certified devices engineered for every clinical specialty — trusted by 500+ hospitals worldwide.</p>
+      <div class="dh-badges">
+        <span class="dh-badge">✅ FDA Approved</span>
+        <span class="dh-badge">🏅 CE Marked</span>
+        <span class="dh-badge">🔒 ISO 13485</span>
+        <span class="dh-badge">🌍 60+ Countries</span>
+      </div>
+      <div class="dh-stats">
+        <div class="dh-stat">
+          <strong>120+</strong>
+          <span>Device Lines</span>
+        </div>
+        <div class="dh-stat">
+          <strong>500+</strong>
+          <span>Hospital Partners</span>
+        </div>
+        <div class="dh-stat">
+          <strong>25 yrs</strong>
+          <span>Innovation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVICES CATALOG -->
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Product Catalog</span>
+        <h2 class="section-title">Browse Our Devices</h2>
+        <p class="section-sub">Click any category to filter, or explore our full portfolio below.</p>
+      </div>
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar reveal" style="margin-top:36px">
+        <button class="filter-btn active" data-filter="all">All Devices</button>
+        <button class="filter-btn" data-filter="cardiology">Cardiology</button>
+        <button class="filter-btn" data-filter="respiratory">Respiratory</button>
+        <button class="filter-btn" data-filter="diagnostics">Diagnostics</button>
+        <button class="filter-btn" data-filter="orthopedics">Orthopedics</button>
+        <button class="filter-btn" data-filter="robotics">Robotics</button>
+        <button class="filter-btn" data-filter="monitoring">Monitoring</button>
+      </div>
+
+      <!-- DEVICES GRID -->
+      <div class="devices-grid" id="devicesGrid">
+
+        <!-- Card 1 -->
+        <div class="device-card" data-cat="cardiology">
+          <div class="dc-img">
+            <img src="images/device_ekg.webp" alt="CardioScan 360" loading="lazy"/>
+            <span class="dc-cat-badge">Cardiology</span>
+            <span class="dc-new-badge">★ Best Seller</span>
+          </div>
+          <div class="dc-body">
+            <h3>CardioScan 360</h3>
+            <p>360° AI-assisted cardiac imaging with real-time anomaly detection. Compatible with all major EMR systems.</p>
+            <div class="dc-specs">
+              <span class="dc-spec">12-Lead ECG</span>
+              <span class="dc-spec">Wireless</span>
+              <span class="dc-spec">AI-Powered</span>
+              <span class="dc-spec">Cloud Sync</span>
+            </div>
+            <div class="dc-footer">
+              <div class="dc-rating">
+                <span class="stars">★★★★★</span>
+                <span>4.9 (320 reviews)</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary" style="padding:8px 18px;font-size:.82rem;">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="device-card" data-cat="respiratory">
+          <div class="dc-img">
+            <img src="images/device_ventilator.webp" alt="VentPro X5" loading="lazy"/>
+            <span class="dc-cat-badge">Respiratory</span>
+          </div>
+          <div class="dc-body">
+            <h3>VentPro X5</h3>
+            <p>Intelligent ICU ventilator with adaptive pressure modes, lung-protective ventilation algorithms and wireless telemetry.</p>
+            <div class="dc-specs">
+              <span class="dc-spec">Adaptive PSV</span>
+              <span class="dc-spec">Neonatal Mode</span>
+              <span class="dc-spec">HIPAA Cloud</span>
+            </div>
+            <div class="dc-footer">
+              <div class="dc-rating">
+                <span class="stars">★★★★★</span>
+                <span>4.8 (214 reviews)</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary" style="padding:8px 18px;font-size:.82rem;">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="device-card" data-cat="diagnostics">
+          <div class="dc-img">
+            <img src="images/device_scan.webp" alt="DiagnoScan AI" loading="lazy"/>
+            <span class="dc-cat-badge">Diagnostics</span>
+            <span class="dc-new-badge">NEW</span>
+          </div>
+          <div class="dc-body">
+            <h3>DiagnoScan AI</h3>
+            <p>Next-generation AI radiology assistant delivering sub-millimeter imaging accuracy with automated report generation.</p>
+            <div class="dc-specs">
+              <span class="dc-spec">AI Reports</span>
+              <span class="dc-spec">DICOM Ready</span>
+              <span class="dc-spec">4K Imaging</span>
+            </div>
+            <div class="dc-footer">
+              <div class="dc-rating">
+                <span class="stars">★★★★★</span>
+                <span>4.9 (178 reviews)</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary" style="padding:8px 18px;font-size:.82rem;">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="device-card" data-cat="robotics">
+          <div class="dc-img">
+            <img src="images/device_robot.webp" alt="SurgiBot Pro" loading="lazy"/>
+            <span class="dc-cat-badge">Robotics</span>
+            <span class="dc-new-badge">NEW</span>
+          </div>
+          <div class="dc-body">
+            <h3>SurgiBot Pro</h3>
+            <p>7-axis robotic surgical assistant with haptic feedback and sub-millimeter precision for minimally invasive procedures.</p>
+            <div class="dc-specs">
+              <span class="dc-spec">7-Axis Arm</span>
+              <span class="dc-spec">Haptic Feedback</span>
+              <span class="dc-spec">4K 3D Vision</span>
+            </div>
+            <div class="dc-footer">
+              <div class="dc-rating">
+                <span class="stars">★★★★★</span>
+                <span>4.8 (92 reviews)</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary" style="padding:8px 18px;font-size:.82rem;">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="device-card" data-cat="monitoring">
+          <div class="dc-img">
+            <img src="images/device_monitor.webp" alt="VitalGuard Pro" loading="lazy"/>
+            <span class="dc-cat-badge">Monitoring</span>
+          </div>
+          <div class="dc-body">
+            <h3>VitalGuard Pro</h3>
+            <p>Continuous multi-parameter patient monitor with AI-driven early warning system and real-time cloud dashboard.</p>
+            <div class="dc-specs">
+              <span class="dc-spec">SpO2</span>
+              <span class="dc-spec">EtCO2</span>
+              <span class="dc-spec">AI Alerts</span>
+              <span class="dc-spec">BT/WiFi</span>
+            </div>
+            <div class="dc-footer">
+              <div class="dc-rating">
+                <span class="stars">★★★★★</span>
+                <span>4.9 (289 reviews)</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary" style="padding:8px 18px;font-size:.82rem;">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="device-card" data-cat="diagnostics">
+          <div class="dc-img">
+            <img src="images/device_lab.webp" alt="LabCore+" loading="lazy"/>
+            <span class="dc-cat-badge">Diagnostics</span>
+          </div>
+          <div class="dc-body">
+            <h3>LabCore+</h3>
+            <p>Automated pathology analysis platform processing 2,000+ tests/hour with integrated LIS connectivity and AI flagging.</p>
+            <div class="dc-specs">
+              <span class="dc-spec">2000/hr</span>
+              <span class="dc-spec">LIS Ready</span>
+              <span class="dc-spec">AI Flagging</span>
+            </div>
+            <div class="dc-footer">
+              <div class="dc-rating">
+                <span class="stars">★★★★☆</span>
+                <span>4.7 (141 reviews)</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary" style="padding:8px 18px;font-size:.82rem;">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /devices-grid -->
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT BAND (featured device) -->
+  <section class="devices-highlight">
+    <div class="container">
+      <div class="dhl-inner">
+        <div class="dhl-text reveal-left">
+          <span class="section-tag">Featured Device</span>
+          <h2>OrthoBot S2 — Precision Orthopedic Surgery</h2>
+          <p>Our flagship robotic-assisted surgical platform delivers unmatched precision for hip and knee replacement procedures, reducing surgery time by 35% and improving implant accuracy to ±0.5mm.</p>
+          <ul class="dhl-feats">
+            <li><span>🦾</span> 6-degree-of-freedom robotic arm with force sensing</li>
+            <li><span>🧠</span> Pre-operative AI planning with patient-specific models</li>
+            <li><span>👁️</span> Intraoperative 3D bone imaging guidance</li>
+            <li><span>📊</span> Real-time outcome analytics and surgical dashboard</li>
+            <li><span>🔒</span> CE marked, FDA 510(k) cleared</li>
+          </ul>
+          <div style="display:flex;gap:14px;flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-primary" style="background:#fff;color:var(--primary);">Request Demo</a>
+            <a href="services.html" class="btn btn-outline">View Services</a>
+          </div>
+        </div>
+        <div class="dhl-img reveal-right">
+          <img src="images/orthopedics.webp" alt="OrthoBot S2 robotic surgery" loading="lazy"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Certifications</span>
+        <h2 class="section-title">Every Device. Every Standard.</h2>
+        <p class="section-sub">All Stackly devices meet or exceed the most stringent global regulatory requirements.</p>
+      </div>
+      <div class="features-grid" style="margin-top:48px">
+        <div class="card reveal delay-1">
+          <div class="card-icon">🇺🇸</div>
+          <h3>FDA 510(k) Cleared</h3>
+          <p>All applicable devices cleared by the U.S. Food &amp; Drug Administration for clinical use in the United States.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-icon">🇪🇺</div>
+          <h3>CE Marked (MDR 2017/745)</h3>
+          <p>Full compliance with EU Medical Device Regulation, allowing sale and use across all 27 European Union member states.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-icon">🏅</div>
+          <h3>ISO 13485:2016</h3>
+          <p>Our quality management system is certified to ISO 13485, ensuring consistent, safe, and effective devices at scale.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-icon">🌏</div>
+          <h3>CDSCO &amp; TGA Registered</h3>
+          <p>Registered with India's CDSCO and Australia's TGA, enabling distribution across the Asia-Pacific region.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-icon">🔒</div>
+          <h3>HIPAA &amp; GDPR Compliant</h3>
+          <p>All connected devices and cloud platforms comply with HIPAA (US) and GDPR (EU) data protection regulations.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-icon">⚡</div>
+          <h3>IEC 60601 Electrical Safety</h3>
+          <p>Every electrical device meets IEC 60601 standards for medical electrical safety, EMC, and essential performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="devices-cta">
+    <div class="container reveal">
+      <span class="section-tag">Ready to Equip Your Facility?</span>
+      <h2>Find the Perfect Device for Your Team</h2>
+      <p>Our clinical advisors will match you with the right devices for your specialty, patient volume, and budget — at no cost.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary">Talk to an Advisor</a>
+        <a href="services.html" class="btn btn-outline-dark">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name"><span class="brand-icon">✚</span> Stackly</div>
+          <p>Pioneering medical device innovation for over 25 years, trusted worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="devices.html">Devices</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Devices</h4>
+          <a href="devices.html">Cardiology</a>
+          <a href="devices.html">Respiratory</a>
+          <a href="devices.html">Diagnostics</a>
+          <a href="devices.html">Robotics</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@stackly.com">info@stackly.com</a>
+          <a href="tel:+18005550199">+1 800 555 0199</a>
+          <a href="404.html">123 MedTech Ave, Boston MA</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Stackly. All rights reserved.</span>
+        <div class="social-icons">
+          <a href="404.html" class="social-icon">𝕏</a>
+          <a href="404.html" class="social-icon">in</a>
+          <a href="404.html" class="social-icon">f</a>
+          <a href="404.html" class="social-icon">▶</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    /* ---- Device filter ---- */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const deviceCards = document.querySelectorAll('.device-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        deviceCards.forEach(card => {
+          const match = filter === 'all' || card.dataset.cat === filter;
+          card.style.display = match ? 'flex' : 'none';
+          if (match) {
+            card.style.animation = 'none';
+            card.offsetHeight; /* reflow */
+            card.style.animation = 'cardPop 0.4s ease both';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

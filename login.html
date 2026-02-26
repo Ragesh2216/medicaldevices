@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login – Stackly</title>
+  <meta name="description" content="Sign in to your Stackly account to access device dashboards, reports, and support portal."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="preloader.css"/>
+  <link rel="stylesheet" href="login.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>"/>
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <span class="logo-box">✚</span>
+        Stackly
+      </div>
+      <div class="preloader-spinner"></div>
+      <p class="preloader-text">Loading…</p>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar nav-dark" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">✚</span> Stackly
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"    class="nav-link">Home</a></li>
+        <li><a href="about.html"    class="nav-link">About</a></li>
+        <li><a href="devices.html"  class="nav-link">Devices</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html"  class="nav-link">Contact</a></li>
+        <li><a href="login.html"    class="nav-link active">Login</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- LOGIN WRAPPER -->
+  <main class="login-page">
+    <!-- LEFT PANEL -->
+    <div class="login-panel-left">
+      <div class="lp-content">
+        <a href="index.html" class="lp-logo">
+          <span class="logo-icon" style="width:44px;height:44px;font-size:1.3rem;">✚</span>
+          Stackly
+        </a>
+        <h2>Welcome Back</h2>
+        <p>Access your device dashboards, reports, service tickets, and real-time patient monitoring — all in one place.</p>
+        <div class="lp-features">
+          <div class="lp-feat"><span>📊</span> Real-time Device Analytics</div>
+          <div class="lp-feat"><span>🔔</span> Instant Alert Monitoring</div>
+          <div class="lp-feat"><span>🛠️</span> Service Request Portal</div>
+          <div class="lp-feat"><span>📁</span> Clinical Reports &amp; Logs</div>
+        </div>
+        <div class="lp-floating lf1">🫀</div>
+        <div class="lp-floating lf2">🔬</div>
+        <div class="lp-floating lf3">🤖</div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="login-panel-right">
+      <div class="login-form-box">
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="loginTab">Sign In</button>
+          <button class="auth-tab" id="signupTab">Create Account</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div id="loginFormWrap">
+          <h3 class="form-heading">Sign in to your account</h3>
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="loginEmail">Email Address</label>
+              <div class="input-icon-wrap">
+                <span class="input-icon">✉</span>
+                <input type="email" id="loginEmail" class="form-control" placeholder="you@hospital.org" required autocomplete="email"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="password">Password <span style="font-size:.78rem;color:var(--text-light);font-weight:400">(min. 6 characters)</span></label>
+              <div class="input-icon-wrap">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="password" class="form-control" placeholder="Enter your password" required minlength="6"/>
+                <button type="button" id="togglePwd" class="pwd-toggle" aria-label="Toggle password">👁</button>
+              </div>
+              <p id="pwdError" class="field-error" style="display:none;color:var(--danger);font-size:.82rem;margin-top:6px;">
+                ⚠ Password must be at least 6 characters.
+              </p>
+            </div>
+            <div class="form-extras">
+              <label class="checkbox-label">
+                <input type="checkbox" id="remember"/>
+                <span class="checkmark"></span>
+                Remember me
+              </label>
+              <a href="404.html" class="forgot-link">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit" style="width:100%;justify-content:center;padding:15px;font-size:1rem;margin-top:8px;">
+              Sign In →
+            </button>
+          </form>
+          <div class="divider"><span>or sign in with</span></div>
+          <div class="social-login">
+            <button class="social-btn" onclick="window.location.href='404.html'">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHBhdGggZmlsbD0iI0ZGQzEwNyIgZD0iTTQzLjYxMSwyMC4wODNIMjRWMjguNWg4LjQyM2MtMS4xNjcsMi43NzMtMy42Miw0LjY2Ny02LjQyMyw0LjY2N2MtMy44ODksMC03LjAzLTMuMTQxLTcuMDMtNy4wM2MwLTMuODg5LDMuMTQxLTcuMDMsNy4wMy03LjAzYzEuNzM3LDAsMy4zMTksMC42Myw0LjUzMiwxLjY2NWwzLjE3My0zLjE3M0MzMC41MTgsMTUuNDY5LDI3LjM5MywxNCwyNCwxNGMtNS41MjMsMC0xMCw0LjQ3Ny0xMCwxMHM0LjQ3NywxMCwxMCwxMGM1LjUyMywwLDEwLTQuNDc3LDEwLTEwQzM0LDIyLjM3NSwzMy44NTIsMjEuMTkxLDQzLjYxMSwyMC4wODN6Ii8+PC9zdmc+" alt="Google" width="20"/>
+              Google
+            </button>
+            <button class="social-btn" onclick="window.location.href='404.html'">
+              <span style="font-size:1.1rem;">in</span>
+              Microsoft
+            </button>
+          </div>
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <div id="signupFormWrap" style="display:none">
+          <h3 class="form-heading">Create your Stackly account</h3>
+          <form id="signupForm" novalidate>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="suFirst">First Name</label>
+                <input type="text" id="suFirst" class="form-control" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="suLast">Last Name</label>
+                <input type="text" id="suLast" class="form-control" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="suEmail">Work Email</label>
+              <div class="input-icon-wrap">
+                <span class="input-icon">✉</span>
+                <input type="email" id="suEmail" class="form-control" placeholder="you@hospital.org" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="suOrg">Hospital / Organization</label>
+              <input type="text" id="suOrg" class="form-control" placeholder="St. Luke's Medical Center" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="suPwd">Password <span style="font-size:.78rem;color:var(--text-light);font-weight:400">(min. 6 characters)</span></label>
+              <div class="input-icon-wrap">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="suPwd" class="form-control" placeholder="Min. 6 characters" required minlength="6"/>
+              </div>
+              <p id="suPwdError" class="field-error" style="display:none;color:var(--danger);font-size:.82rem;margin-top:6px;">
+                ⚠ Password must be at least 6 characters.
+              </p>
+            </div>
+            <div class="form-group">
+              <label class="checkbox-label" style="color:var(--text-mid);font-size:.85rem;">
+                <input type="checkbox" id="terms" required />
+                <span class="checkmark"></span>
+                I agree to the <a href="404.html" style="color:var(--primary);">Terms of Service</a> and <a href="404.html" style="color:var(--primary);">Privacy Policy</a>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit" style="width:100%;justify-content:center;padding:15px;font-size:1rem;">
+              Create Account →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+  <script>
+    /* ---- Tab switching ---- */
+    const loginTab   = document.getElementById('loginTab');
+    const signupTab  = document.getElementById('signupTab');
+    const loginWrap  = document.getElementById('loginFormWrap');
+    const signupWrap = document.getElementById('signupFormWrap');
+
+    loginTab.addEventListener('click', () => {
+      loginTab.classList.add('active');
+      signupTab.classList.remove('active');
+      loginWrap.style.display  = 'block';
+      signupWrap.style.display = 'none';
+    });
+    signupTab.addEventListener('click', () => {
+      signupTab.classList.add('active');
+      loginTab.classList.remove('active');
+      signupWrap.style.display = 'block';
+      loginWrap.style.display  = 'none';
+    });
+
+    /* ---- Login: password min 6 chars ---- */
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const pwd     = document.getElementById('password');
+      const pwdErr  = document.getElementById('pwdError');
+      const email   = document.getElementById('loginEmail');
+
+      if (pwd.value.length < 6) {
+        pwdErr.style.display = 'block';
+        pwd.style.borderColor = 'var(--danger)';
+        pwd.focus();
+        return;
+      }
+      pwdErr.style.display = 'none';
+      pwd.style.borderColor = '';
+
+      if (!email.value) { email.focus(); return; }
+
+      // Valid — redirect to 404.html
+      const btn = this.querySelector('.btn-submit');
+      btn.textContent = 'Signing in…';
+      btn.disabled = true;
+      setTimeout(() => { window.location.href = '404.html'; }, 1000);
+    });
+
+    /* Live validate pwd */
+    document.getElementById('password').addEventListener('input', function() {
+      const err = document.getElementById('pwdError');
+      if (this.value.length >= 6) {
+        err.style.display = 'none';
+        this.style.borderColor = '';
+      }
+    });
+
+    /* ---- Signup: password min 6 chars ---- */
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const pwd    = document.getElementById('suPwd');
+      const pwdErr = document.getElementById('suPwdError');
+
+      if (pwd.value.length < 6) {
+        pwdErr.style.display = 'block';
+        pwd.style.borderColor = 'var(--danger)';
+        pwd.focus();
+        return;
+      }
+      pwdErr.style.display = 'none';
+      pwd.style.borderColor = '';
+
+      const btn = this.querySelector('.btn-submit');
+      btn.textContent = 'Creating account…';
+      btn.disabled = true;
+      setTimeout(() => { window.location.href = '404.html'; }, 1000);
+    });
+
+    document.getElementById('suPwd').addEventListener('input', function() {
+      const err = document.getElementById('suPwdError');
+      if (this.value.length >= 6) {
+        err.style.display = 'none';
+        this.style.borderColor = '';
+      }
+    });
+  </script>
+</body>
+</html>

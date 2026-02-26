@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services – Stackly</title>
+    <meta name="description"
+        content="Explore Stackly's full range of medical device services across cardiology, respiratory, orthopedics, diagnostics, and surgical robotics." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="preloader.css" />
+    <link rel="stylesheet" href="services.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>" />
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <span class="logo-box">✚</span>
+                Stackly
+            </div>
+            <div class="preloader-spinner"></div>
+            <p class="preloader-text">Loading…</p>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar nav-dark" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">✚</span> Stackly
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="devices.html"  class="nav-link">Devices</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+        <div class="container" style="position:relative;z-index:1">
+            <span class="badge" style="background:rgba(255,255,255,.2);color:#fff;">Our Offerings</span>
+            <h1>Our Medical Services</h1>
+            <p>From diagnostics to surgical robotics — comprehensive solutions for every clinical specialty.</p>
+        </div>
+    </header>
+
+    <!-- SERVICE TABS -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-tag">Specialties</span>
+                <h2 class="section-title">Choose Your Area of Care</h2>
+                <p class="section-sub">Browse by clinical specialty to discover the devices and support services
+                    tailored for your department.</p>
+            </div>
+
+            <div class="tabs reveal" style="margin-top:52px">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="cardiology">🫀 Cardiology</button>
+                    <button class="tab-btn" data-tab="respiratory">🫁 Respiratory</button>
+                    <button class="tab-btn" data-tab="orthopedics">🦴 Orthopedics</button>
+                    <button class="tab-btn" data-tab="diagnostics">🔬 Diagnostics</button>
+                    <button class="tab-btn" data-tab="robotics">🤖 Robotics</button>
+                </div>
+
+                <div class="tab-panel active" id="cardiology">
+                    <div class="tab-content-grid">
+                        <div class="tab-text">
+                            <span class="section-tag">Cardiology</span>
+                            <h3>Advanced Cardiac Care Devices</h3>
+                            <p>Our cardiology portfolio spans from portable ECG monitors to full 360° cardiac imaging
+                                suites, integrating directly with hospital EMR systems.</p>
+                            <ul class="feature-list">
+                                <li>✅ CardioScan 360 – AI-assisted cardiac imaging</li>
+                                <li>✅ CardioTrack Pro – Continuous 12-lead ECG monitoring</li>
+                                <li>✅ HeartLink Cloud – Remote patient monitoring platform</li>
+                                <li>✅ ImplantAssist – Pacemaker programming &amp; interrogation tool</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary" style="margin-top:24px">Request a Demo</a>
+                        </div>
+                        <div class="tab-img-wrap"><img src="images/cardiology.webp" alt="Cardiology Device" loading="lazy"/></div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="respiratory">
+                    <div class="tab-content-grid">
+                        <div class="tab-text">
+                            <span class="section-tag">Respiratory</span>
+                            <h3>Intelligent Respiratory Solutions</h3>
+                            <p>From ICU ventilators to portable nebulizers, Stackly's respiratory range ensures optimal
+                                airway management for all patient types.</p>
+                            <ul class="feature-list">
+                                <li>✅ VentPro X5 – Adaptive pressure intelligent ventilator</li>
+                                <li>✅ PulmoScan HD – High-definition spirometry system</li>
+                                <li>✅ AirGuard+ – Wearable respiratory rate monitor</li>
+                                <li>✅ NebulaMX – Precision drug delivery nebulizer</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary" style="margin-top:24px">Request a Demo</a>
+                        </div>
+                        <div class="tab-img-wrap"><img src="images/respiratory.webp" alt="Respiratory Equipment" loading="lazy"/></div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="orthopedics">
+                    <div class="tab-content-grid">
+                        <div class="tab-text">
+                            <span class="section-tag">Orthopedics</span>
+                            <h3>Precision Orthopedic Technology</h3>
+                            <p>Stackly's orthopedic suite combines robotic-assisted surgery with smart implant
+                                technology to dramatically improve patient outcomes.</p>
+                            <ul class="feature-list">
+                                <li>✅ OrthoBot S2 – Surgical robotic assistant for joint replacement</li>
+                                <li>✅ BoneScan 3D – Intraoperative 3D bone imaging</li>
+                                <li>✅ SmartImplant – IoT-enabled implant with load monitoring</li>
+                                <li>✅ RehabSync – Post-surgical physiotherapy tracking</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary" style="margin-top:24px">Request a Demo</a>
+                        </div>
+                        <div class="tab-img-wrap"><img src="images/orthopedics.webp" alt="Orthopedic Robotics" loading="lazy"/></div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="diagnostics">
+                    <div class="tab-content-grid">
+                        <div class="tab-text">
+                            <span class="section-tag">Diagnostics</span>
+                            <h3>Next-Gen Diagnostic Imaging</h3>
+                            <p>From point-of-care ultrasound to whole-body MRI, our diagnostics range delivers
+                                sub-millimeter accuracy with AI-assisted reporting.</p>
+                            <ul class="feature-list">
+                                <li>✅ DiagnoScan AI – AI-powered radiology assistant</li>
+                                <li>✅ UltraView Pro – Handheld wireless ultrasound</li>
+                                <li>✅ LabCore+ – Automated pathology analysis platform</li>
+                                <li>✅ PET-CT Fusion – Combined nuclear and CT imaging</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary" style="margin-top:24px">Request a Demo</a>
+                        </div>
+                        <div class="tab-img-wrap"><img src="images/diagnostics.webp" alt="Diagnostic Imaging" loading="lazy"/></div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="robotics">
+                    <div class="tab-content-grid">
+                        <div class="tab-text">
+                            <span class="section-tag">Surgical Robotics</span>
+                            <h3>Autonomous Surgical Assistance</h3>
+                            <p>Stackly's robotics platform brings sub-millimeter precision to complex surgical
+                                procedures, reducing operating time and patient trauma.</p>
+                            <ul class="feature-list">
+                                <li>✅ SurgiBot Pro – 7-axis surgical robotic arm system</li>
+                                <li>✅ NanoScope – Robotic micro-endoscopy system</li>
+                                <li>✅ TeleOp Suite – Remote-controlled surgical platform</li>
+                                <li>✅ OR-AI – Smart operating room coordination system</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary" style="margin-top:24px">Request a Demo</a>
+                        </div>
+                        <div class="tab-img-wrap"><img src="images/robotics.webp" alt="Surgical Robotics" loading="lazy"/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPPORT SERVICES -->
+    <section class="section alt-bg">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-tag">Support</span>
+                <h2 class="section-title">Complete Support Ecosystem</h2>
+            </div>
+            <div class="support-grid">
+                <div class="support-card reveal delay-1">
+                    <div class="card-icon">🛠️</div>
+                    <h3>Installation &amp; Commissioning</h3>
+                    <p>Our biomedical engineers handle full on-site installation, calibration, and acceptance testing
+                        with project management support.</p>
+                </div>
+                <div class="support-card reveal delay-2">
+                    <div class="card-icon">📚</div>
+                    <h3>Clinical Training</h3>
+                    <p>Comprehensive training for clinicians, nurses, and technicians — available on-site, online, or at
+                        our global training centres.</p>
+                </div>
+                <div class="support-card reveal delay-3">
+                    <div class="card-icon">🔧</div>
+                    <h3>Maintenance &amp; AMC</h3>
+                    <p>Flexible annual maintenance contracts with 24/7 emergency support and guaranteed parts
+                        availability for 10 years.</p>
+                </div>
+                <div class="support-card reveal delay-4">
+                    <div class="card-icon">☁️</div>
+                    <h3>Stackly Cloud</h3>
+                    <p>Real-time device telemetry, remote diagnostics, and predictive maintenance on our secure,
+                        HIPAA-compliant cloud platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">Your Journey With Stackly</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step reveal delay-1">
+                    <div class="step-num">01</div>
+                    <div class="step-body">
+                        <h4>Consultation</h4>
+                        <p>Our clinical advisors visit your facility to understand your exact needs, patient volume, and
+                            existing infrastructure.</p>
+                    </div>
+                </div>
+                <div class="step-connector reveal delay-2">→</div>
+                <div class="step reveal delay-2">
+                    <div class="step-num">02</div>
+                    <div class="step-body">
+                        <h4>Solution Design</h4>
+                        <p>We create a customised device and service plan, complete with site planning, budget
+                            estimates, and regulatory documentation.</p>
+                    </div>
+                </div>
+                <div class="step-connector reveal delay-3">→</div>
+                <div class="step reveal delay-3">
+                    <div class="step-num">03</div>
+                    <div class="step-body">
+                        <h4>Installation</h4>
+                        <p>Expert engineers deliver, install, and commission every device with rigorous acceptance
+                            testing protocols.</p>
+                    </div>
+                </div>
+                <div class="step-connector reveal delay-4">→</div>
+                <div class="step reveal delay-4">
+                    <div class="step-num">04</div>
+                    <div class="step-body">
+                        <h4>Ongoing Support</h4>
+                        <p>24/7 technical helpdesk, remote diagnostics, field service with 4-hr SLA, and cloud
+                            monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="services-cta">
+        <div class="container text-center reveal">
+            <h2
+                style="font-family:'Playfair Display',serif;color:#fff;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:16px;">
+                Let's Find the Right Solution For You
+            </h2>
+            <p
+                style="color:rgba(255,255,255,.8);margin-bottom:32px;font-size:1.05rem;max-width:480px;margin-left:auto;margin-right:auto;">
+                Talk to our clinical advisors today and get a custom quote for your facility.
+            </p>
+            <a href="contact.html" class="btn btn-primary" style="background:#fff;color:var(--primary);">Get a Free
+                Consultation</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-name"><span class="brand-icon">✚</span> Stackly</div>
+                    <p>Pioneering medical device innovation for over 25 years, trusted worldwide.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="login.html">Login</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="services.html">Cardiology</a>
+                    <a href="services.html">Respiratory</a>
+                    <a href="services.html">Orthopedics</a>
+                    <a href="services.html">Diagnostics</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:info@stackly.com">info@stackly.com</a>
+                    <a href="tel:+18005550199">+1 800 555 0199</a>
+                    <a href="404.html">123 MedTech Ave, Boston MA</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Stackly. All rights reserved.</span>
+                <div class="social-icons">
+                    <a href="404.html" class="social-icon">𝕏</a>
+                    <a href="404.html" class="social-icon">in</a>
+                    <a href="404.html" class="social-icon">f</a>
+                    <a href="404.html" class="social-icon">▶</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

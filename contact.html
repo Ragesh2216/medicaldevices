@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Stackly</title>
+    <meta name="description" content="Get in touch with Stackly's team for product inquiries, demos, and support." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="preloader.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>" />
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <span class="logo-box">✚</span>
+                Stackly
+            </div>
+            <div class="preloader-spinner"></div>
+            <p class="preloader-text">Loading…</p>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar nav-dark" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">✚</span> Stackly
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="devices.html"  class="nav-link">Devices</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+        <div class="container" style="position:relative;z-index:1">
+            <span class="badge" style="background:rgba(255,255,255,.2);color:#fff;">We're Here to Help</span>
+            <h1>Contact Stackly</h1>
+            <p>Reach our clinical advisors, sales team, or technical support — anytime, anywhere.</p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTACT SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- FORM -->
+                <div class="contact-form-wrap reveal-left">
+                    <h2 class="section-title text-left" style="font-size:1.8rem;margin-bottom:8px;">Send Us a Message
+                    </h2>
+                    <p style="color:var(--text-mid);margin-bottom:32px;font-size:0.95rem;">Fill in the form and our team
+                        will respond within 24 hours.</p>
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="firstName">First Name *</label>
+                                <input type="text" id="firstName" class="form-control" placeholder="Dr. Alan"
+                                    required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" class="form-control" placeholder="Brooks" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="you@hospital.org"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+1 800 555 0199" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="department">Department / Specialty</label>
+                            <select id="department" class="form-control">
+                                <option value="" disabled selected>Select your specialty</option>
+                                <option>Cardiology</option>
+                                <option>Respiratory &amp; Critical Care</option>
+                                <option>Orthopedics</option>
+                                <option>Radiology &amp; Diagnostics</option>
+                                <option>Surgical Robotics</option>
+                                <option>Hospital Administration</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="inquiry">Inquiry Type</label>
+                            <select id="inquiry" class="form-control">
+                                <option value="" disabled selected>What can we help you with?</option>
+                                <option>Product Demo</option>
+                                <option>Sales &amp; Pricing</option>
+                                <option>Technical Support</option>
+                                <option>Partnership / Distribution</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Your Message *</label>
+                            <textarea id="message" class="form-control"
+                                placeholder="Tell us about your facility and what you're looking for…"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            style="width:100%;justify-content:center;font-size:1rem;padding:16px;">
+                            Send Message &nbsp;→
+                        </button>
+                    </form>
+                </div>
+
+                <!-- INFO CARDS -->
+                <div class="contact-info reveal-right">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Headquarters</h4>
+                            <p>123 MedTech Avenue<br />Boston, MA 02115, USA</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+18005550199">+1 800 555 0199</a><br />Mon–Fri, 8 AM – 8 PM EST</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@stackly.com">info@stackly.com</a><br />We reply within 24 hours</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🆘</div>
+                        <div>
+                            <h4>24/7 Technical Support</h4>
+                            <p><a href="tel:+18005550911">+1 800 555 0911</a><br />Emergency device support line</p>
+                        </div>
+                    </div>
+                    <div class="contact-office-img">
+            <img src="images/contact_office.webp" alt="Stackly Office" loading="lazy"/>
+            <div class="office-img-badge">
+              <span>📍</span> 123 MedTech Ave, Boston MA
+            </div>
+          </div>              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLOBAL OFFICES -->
+    <section class="section alt-bg">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-tag">Global Presence</span>
+                <h2 class="section-title">Our Offices Worldwide</h2>
+            </div>
+            <div class="offices-grid">
+                <div class="office-card reveal delay-1">
+                    <div class="office-flag">🇺🇸</div>
+                    <h4>Boston, USA</h4>
+                    <p>Global HQ<br />123 MedTech Ave, MA 02115</p>
+                    <a href="tel:+18005550199">+1 800 555 0199</a>
+                </div>
+                <div class="office-card reveal delay-2">
+                    <div class="office-flag">🇬🇧</div>
+                    <h4>London, UK</h4>
+                    <p>Europe HQ<br />45 MedCity Square, EC2A 4EP</p>
+                    <a href="tel:+442071234567">+44 20 7123 4567</a>
+                </div>
+                <div class="office-card reveal delay-3">
+                    <div class="office-flag">🇦🇪</div>
+                    <h4>Dubai, UAE</h4>
+                    <p>Middle East &amp; Africa<br />Dubai Healthcare City, Bloc 4</p>
+                    <a href="tel:+97143456789">+971 4 345 6789</a>
+                </div>
+                <div class="office-card reveal delay-4">
+                    <div class="office-flag">🇸🇬</div>
+                    <h4>Singapore</h4>
+                    <p>Asia Pacific<br />1 Medipark Drive, #08-01</p>
+                    <a href="tel:+6567891234">+65 6789 1234</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-name"><span class="brand-icon">✚</span> Stackly</div>
+                    <p>Pioneering medical device innovation for over 25 years, trusted worldwide.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="login.html">Login</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="services.html">Cardiology</a>
+                    <a href="services.html">Respiratory</a>
+                    <a href="services.html">Orthopedics</a>
+                    <a href="services.html">Diagnostics</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:info@stackly.com">info@stackly.com</a>
+                    <a href="tel:+18005550199">+1 800 555 0199</a>
+                    <a href="404.html">123 MedTech Ave, Boston MA</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Stackly. All rights reserved.</span>
+                <div class="social-icons">
+                    <a href="404.html" class="social-icon">𝕏</a>
+                    <a href="404.html" class="social-icon">in</a>
+                    <a href="404.html" class="social-icon">f</a>
+                    <a href="404.html" class="social-icon">▶</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

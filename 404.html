@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found – Stackly</title>
+    <meta name="description" content="The page you're looking for doesn't exist." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>" />
+    <style>
+        .not-found-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-light);
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .nf-inner {
+            max-width: 560px;
+        }
+
+        .nf-code {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(6rem, 18vw, 10rem);
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, #0d6efd 0%, #00c4b4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .nf-icon {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 24px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .nf-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 14px;
+            animation: fadeUp 0.7s ease 0.1s both;
+        }
+
+        .nf-sub {
+            font-size: 1rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            margin-bottom: 36px;
+            animation: fadeUp 0.7s ease 0.2s both;
+        }
+
+        .nf-actions {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeUp 0.7s ease 0.3s both;
+        }
+
+        .nf-links {
+            margin-top: 40px;
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeUp 0.7s ease 0.4s both;
+        }
+
+        .nf-links a {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .nf-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar nav-dark" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">✚</span> Stackly
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="devices.html"  class="nav-link">Devices</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="not-found-page" style="padding-top:calc(var(--nav-height) + 40px)">
+        <div class="nf-inner">
+            <span class="nf-icon">🏥</span>
+            <div class="nf-code">404</div>
+            <h1 class="nf-title">Oops! Page Not Found</h1>
+            <p class="nf-sub">
+                The page you're looking for may have been moved, renamed, or doesn't exist yet.<br />
+                Let's get you back on track.
+            </p>
+            <div class="nf-actions">
+                <a href="index.html" class="btn btn-primary">← Back to Home</a>
+                <a href="contact.html" class="btn btn-outline-dark">Contact Support</a>
+            </div>
+            <div class="nf-links">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
