@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – Stackly</title>
+  <meta name="description" content="Stackly clinical dashboard — real-time device monitoring, patient vitals, and analytics for hospital administrators."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="preloader.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>"/>
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo"><span class="logo-box">✚</span> Stackly</div>
+      <div class="preloader-spinner"></div>
+      <p class="preloader-text">Loading Dashboard…</p>
+    </div>
+  </div>
+
+  <!-- TOP NAVBAR -->
+   <nav class="navbar nav-dark" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">✚</span> Stackly
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="devices.html"  class="nav-link">Devices</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+                
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+        <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html"     class="mobile-nav-link">About</a>
+    <a href="devices.html"   class="mobile-nav-link">Devices</a>
+    <a href="services.html"  class="mobile-nav-link">Services</a>
+    <a href="contact.html"   class="mobile-nav-link">Contact</a>
+    <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+    <a href="login.html"     class="mobile-nav-link mobile-login">Login</a>
+  </div>
+
+  <!-- DASHBOARD LAYOUT -->
+  <div class="dash-layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="dash-sidebar">
+      <!-- Profile -->
+      <div class="ds-profile">
+        <div class="ds-avatar">
+          <img src="images/doctor_alan.webp" alt="Admin User"/>
+        </div>
+        <div>
+          <div class="ds-name">Dr. Alan Brooks</div>
+          <div class="ds-role">Chief Medical Officer</div>
+        </div>
+      </div>
+
+      <!-- Nav items -->
+      <div class="ds-section-label">Overview</div>
+      <a href="#overview" class="ds-nav-item active"><span class="ds-nav-icon">📊</span> Dashboard</a>
+      <a href="#patients" class="ds-nav-item"><span class="ds-nav-icon">🧑‍⚕️</span> Patients</a>
+      <a href="#devices"  class="ds-nav-item"><span class="ds-nav-icon">🩺</span> Devices</a>
+
+      <div class="ds-section-label">Analytics</div>
+      <a href="#alerts"   class="ds-nav-item"><span class="ds-nav-icon">🔔</span> Alerts <span style="margin-left:auto;background:#f43f5e;color:#fff;font-size:.65rem;padding:2px 7px;border-radius:99px;">3</span></a>
+      <a href="#reports"  class="ds-nav-item"><span class="ds-nav-icon">📋</span> Reports</a>
+      <a href="#analytics"class="ds-nav-item"><span class="ds-nav-icon">📈</span> Analytics</a>
+
+      <div class="ds-section-label">System</div>
+      <a href="contact.html" class="ds-nav-item"><span class="ds-nav-icon">⚙️</span> Settings</a>
+      <a href="login.html"   class="ds-nav-item"><span class="ds-nav-icon">🚪</span> Sign Out</a>
+    </aside>
+
+    <!-- ===== MAIN ===== -->
+    <main class="dash-main" id="overview">
+
+      <!-- Top bar -->
+      <div class="dash-topbar">
+        <div>
+          <h1>Good morning, Dr. Brooks 👋</h1>
+          <p>Thursday, 27 February 2026 · St. Luke's Medical Center</p>
+        </div>
+        <div class="dash-actions">
+          <a href="404.html" class="btn btn-outline-dark" style="padding:9px 18px;font-size:.84rem;">+ Add Patient</a>
+          <a href="404.html" class="btn btn-primary"      style="padding:9px 18px;font-size:.84rem;">📤 Export Report</a>
+        </div>
+      </div>
+
+      <!-- ===== KPI CARDS ===== -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon blue">🧑‍⚕️</div>
+          <div class="kpi-info">
+            <div class="kpi-label">Active Patients</div>
+            <div class="kpi-value" id="kpi1">0</div>
+            <span class="kpi-change up">↑ 12% vs last week</span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon green">🩺</div>
+          <div class="kpi-info">
+            <div class="kpi-label">Devices Online</div>
+            <div class="kpi-value" id="kpi2">0</div>
+            <span class="kpi-change up">↑ 3 added today</span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon orange">⚠️</div>
+          <div class="kpi-info">
+            <div class="kpi-label">Open Alerts</div>
+            <div class="kpi-value" id="kpi3">0</div>
+            <span class="kpi-change down">↓ 5 resolved today</span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon red">📋</div>
+          <div class="kpi-info">
+            <div class="kpi-label">Reports Pending</div>
+            <div class="kpi-value" id="kpi4">0</div>
+            <span class="kpi-change up">↑ 4 new</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== CHART PANELS ===== -->
+      <div class="dash-panels">
+
+        <!-- Bar chart panel -->
+        <div class="dash-panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Device Utilisation — This Week</div>
+              <div class="panel-sub">Hourly average across all active units</div>
+            </div>
+            <span class="panel-badge">Live</span>
+          </div>
+          <!-- CSS bar chart -->
+          <div class="bar-chart">
+            <div class="bar-col"><div class="bar-fill" style="height:55%"></div><span class="bar-label">Mon</span></div>
+            <div class="bar-col"><div class="bar-fill" style="height:72%"></div><span class="bar-label">Tue</span></div>
+            <div class="bar-col"><div class="bar-fill" style="height:63%"></div><span class="bar-label">Wed</span></div>
+            <div class="bar-col"><div class="bar-fill" style="height:89%"></div><span class="bar-label">Thu</span></div>
+            <div class="bar-col"><div class="bar-fill alt" style="height:45%"></div><span class="bar-label">Fri</span></div>
+            <div class="bar-col"><div class="bar-fill alt" style="height:30%"></div><span class="bar-label">Sat</span></div>
+            <div class="bar-col"><div class="bar-fill alt" style="height:20%"></div><span class="bar-label">Sun</span></div>
+          </div>
+          <!-- Analytics image -->
+          <div class="dash-chart-img" style="margin-top:16px;">
+            <img src="images/dash_chart.webp" alt="Analytics chart" loading="lazy"/>
+          </div>
+        </div>
+
+        <!-- Donut panel -->
+        <div class="dash-panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Patient Breakdown</div>
+              <div class="panel-sub">By department · Today</div>
+            </div>
+          </div>
+          <div class="donut-wrap" style="margin-top:12px;">
+            <div class="donut"></div>
+            <div class="donut-legend">
+              <div class="dl-item">
+                <div class="dl-dot" style="background:#0d6efd"></div>
+                <span>Cardiology</span>
+                <strong>38%</strong>
+              </div>
+              <div class="dl-item">
+                <div class="dl-dot" style="background:#00c4b4"></div>
+                <span>Respiratory</span>
+                <strong>23%</strong>
+              </div>
+              <div class="dl-item">
+                <div class="dl-dot" style="background:#f59e0b"></div>
+                <span>Orthopedics</span>
+                <strong>17%</strong>
+              </div>
+              <div class="dl-item">
+                <div class="dl-dot" style="background:#f43f5e"></div>
+                <span>ICU / Other</span>
+                <strong>22%</strong>
+              </div>
+            </div>
+          </div>
+          <!-- Patient image -->
+          <div style="margin-top:18px;border-radius:var(--radius-sm);overflow:hidden;height:120px;">
+            <img src="images/dash_patient.webp" alt="Patient care" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+          </div>
+        </div>
+
+      </div><!-- /dash-panels -->
+
+      <!-- ===== BOTTOM GRID ===== -->
+      <div class="dash-bottom" id="patients">
+
+        <!-- Recent Patients -->
+        <div class="dash-panel" style="animation-delay:.3s">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Recent Patients</div>
+              <div class="panel-sub">Last updated 2 min ago</div>
+            </div>
+            <a href="contact.html" class="panel-badge" style="cursor:pointer;">View All</a>
+          </div>
+          <div class="patient-row">
+            <div class="pat-avatar">👩</div>
+            <div>
+              <div class="pat-name">Anita Sharma</div>
+              <div class="pat-id">ID #P-20241</div>
+            </div>
+            <span class="pat-status stable">Stable</span>
+          </div>
+          <div class="patient-row">
+            <div class="pat-avatar" style="background:#fce7f3;">👨</div>
+            <div>
+              <div class="pat-name">James O'Brien</div>
+              <div class="pat-id">ID #P-20242</div>
+            </div>
+            <span class="pat-status critical">Critical</span>
+          </div>
+          <div class="patient-row">
+            <div class="pat-avatar" style="background:#d1fae5;">👩</div>
+            <div>
+              <div class="pat-name">Mei Lin Zhou</div>
+              <div class="pat-id">ID #P-20243</div>
+            </div>
+            <span class="pat-status obs">Observation</span>
+          </div>
+          <div class="patient-row">
+            <div class="pat-avatar" style="background:#fff7ed;">👨</div>
+            <div>
+              <div class="pat-name">Carlos Reyes</div>
+              <div class="pat-id">ID #P-20244</div>
+            </div>
+            <span class="pat-status stable">Stable</span>
+          </div>
+          <div class="patient-row">
+            <div class="pat-avatar" style="background:#ede9fe;">👩</div>
+            <div>
+              <div class="pat-name">Priya Nambiar</div>
+              <div class="pat-id">ID #P-20245</div>
+            </div>
+            <span class="pat-status stable">Stable</span>
+          </div>
+        </div>
+
+        <!-- Device Status -->
+        <div class="dash-panel" style="animation-delay:.4s" id="devices">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Device Status</div>
+              <div class="panel-sub">Utilisation · Right now</div>
+            </div>
+            <a href="devices.html" class="panel-badge" style="cursor:pointer;">All Devices</a>
+          </div>
+          <div class="device-row">
+            <div class="dev-icon">🫀</div>
+            <div>
+              <div class="dev-name">CardioScan 360</div>
+              <div class="dev-loc">ICU Ward 3 · Online</div>
+            </div>
+            <div class="dev-bar-wrap">
+              <div class="dev-bar"><div class="dev-bar-fill" style="width:87%"></div></div>
+              <div class="dev-pct">87%</div>
+            </div>
+          </div>
+          <div class="device-row">
+            <div class="dev-icon">🫁</div>
+            <div>
+              <div class="dev-name">VentPro X5</div>
+              <div class="dev-loc">Resp. Unit · Online</div>
+            </div>
+            <div class="dev-bar-wrap">
+              <div class="dev-bar"><div class="dev-bar-fill" style="width:71%"></div></div>
+              <div class="dev-pct">71%</div>
+            </div>
+          </div>
+          <div class="device-row">
+            <div class="dev-icon">🦾</div>
+            <div>
+              <div class="dev-name">OrthoBot S2</div>
+              <div class="dev-loc">OR-2 · In Surgery</div>
+            </div>
+            <div class="dev-bar-wrap">
+              <div class="dev-bar"><div class="dev-bar-fill" style="width:100%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
+              <div class="dev-pct" style="color:#ef4444;">100%</div>
+            </div>
+          </div>
+          <div class="device-row">
+            <div class="dev-icon">🔬</div>
+            <div>
+              <div class="dev-name">DiagnoScan AI</div>
+              <div class="dev-loc">Radiology · Online</div>
+            </div>
+            <div class="dev-bar-wrap">
+              <div class="dev-bar"><div class="dev-bar-fill" style="width:54%"></div></div>
+              <div class="dev-pct">54%</div>
+            </div>
+          </div>
+          <div class="device-row">
+            <div class="dev-icon">📊</div>
+            <div>
+              <div class="dev-name">VitalGuard Pro</div>
+              <div class="dev-loc">Ward 7 · Online</div>
+            </div>
+            <div class="dev-bar-wrap">
+              <div class="dev-bar"><div class="dev-bar-fill" style="width:63%"></div></div>
+              <div class="dev-pct">63%</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /dash-bottom -->
+
+    </main><!-- /dash-main -->
+  </div><!-- /dash-layout -->
+
+  <script src="main.js"></script>
+  <script>
+    /* Animate KPI counters */
+    function animateCounter(el, target) {
+      let start = 0;
+      const duration = 1600;
+      const startTime = performance.now();
+      function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(eased * target);
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(update);
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        animateCounter(document.getElementById('kpi1'), 248);
+        animateCounter(document.getElementById('kpi2'), 37);
+        animateCounter(document.getElementById('kpi3'), 3);
+        animateCounter(document.getElementById('kpi4'), 12);
+      }, 400);
+    });
+
+    /* Sidebar active links */
+    document.querySelectorAll('.ds-nav-item').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.ds-nav-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -33,21 +33,60 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateNavbar, { passive: true });
   updateNavbar();
 
-  /* ---- Navbar: mobile toggle ---- */
+  /* ---- Navbar: mobile toggle → shows #mobileMenu ---- */
+  const mobileMenu      = document.getElementById('mobileMenu');
+  const mobileHomeToggle = document.getElementById('mobileHomeToggle');
+  const mobileHomeSubmenu = document.getElementById('mobileHomeSubmenu');
+
   if (navToggle) {
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('open');
-      navLinks.classList.toggle('open');
+      mobileMenu && mobileMenu.classList.toggle('open');
     });
   }
 
-  /* Close mobile menu on link click */
-  document.querySelectorAll('.nav-link').forEach(link => {
+  /* Close mobile menu when a non-submenu link is clicked */
+  document.querySelectorAll('.mobile-nav-link, .mobile-sub-link').forEach(link => {
     link.addEventListener('click', () => {
-      navToggle && navToggle.classList.remove('open');
-      navLinks  && navLinks.classList.remove('open');
+      navToggle    && navToggle.classList.remove('open');
+      mobileMenu   && mobileMenu.classList.remove('open');
     });
   });
+
+  /* Mobile accordion – Home submenu */
+  if (mobileHomeToggle && mobileHomeSubmenu) {
+    mobileHomeToggle.addEventListener('click', () => {
+      const isOpen = mobileHomeSubmenu.classList.toggle('open');
+      mobileHomeToggle.classList.toggle('open', isOpen);
+    });
+  }
+
+  /* Desktop dropdown: JS click fallback (touch devices don't have :hover) */
+  const homeDropdown = document.getElementById('homeDropdown');
+  if (homeDropdown) {
+    homeDropdown.querySelector('.dropdown-trigger').addEventListener('click', (e) => {
+      // Only intercept on touch / small screens — let href work on desktop hover
+      if (window.matchMedia('(hover: none)').matches) {
+        e.preventDefault();
+        homeDropdown.classList.toggle('open');
+      }
+    });
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!homeDropdown.contains(e.target)) {
+        homeDropdown.classList.remove('open');
+      }
+    });
+  }
+
+  /* Close mobile menu on desktop resize */
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navToggle  && navToggle.classList.remove('open');
+      mobileMenu && mobileMenu.classList.remove('open');
+    }
+  });
+
 
   /* ---- Active nav link ---- */
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';

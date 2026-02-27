@@ -395,52 +395,178 @@
     }
 
     .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* ============================================
+   RESPONSIVE – About Page
+   ============================================ */
+
+/* --- Tablet (≤ 1024px) --- */
+@media (max-width: 1024px) {
+  .about-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mission-visual {
+    height: 300px;
+  }
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-grid-pro {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .doctors-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/* --- Mobile landscape / small tablet (≤ 768px) --- */
 @media (max-width: 768px) {
-    .about-mission-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .mission-visual {
-        display: none;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stats-bar {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .sbar-item:nth-child(2) {
-        border-right: none;
-    }
-
-    .timeline {
-        padding-left: 24px;
-    }
+  .about-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .mission-visual {
+    height: 220px;
+  }
+  .mission-img-main {
+    width: 100%;
+    height: 220px;
+    position: relative;
+  }
+  .badge-1 {
+    bottom: -40px;
+    right: 12px;
+    width: 130px;
+  }
+  .badge-2 {
+    display: none;
+  }
+  .mission-pills {
+    gap: 8px;
+  }
+  .m-pill {
+    font-size: 0.77rem;
+    padding: 6px 12px;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .team-grid-pro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .tcp-img-wrap {
+    height: 200px;
+  }
+  .doctors-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .doctor-mini {
+    padding: 16px;
+  }
+  .dm-img {
+    width: 60px;
+    height: 60px;
+  }
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sbar-item:nth-child(2) {
+    border-right: none;
+  }
+  .timeline {
+    padding-left: 20px;
+  }
+  .tl-dot {
+    left: -23px;
+  }
+  .tc-header {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
 }
 
+/* --- Mobile portrait (≤ 480px) --- */
 @media (max-width: 480px) {
-    .team-grid-pro {
-        grid-template-columns: 1fr;
-    }
-
-    .stats-bar {
-        grid-template-columns: 1fr;
-    }
-
-    .sbar-item {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, .1);
-    }
-}
+  .about-mission-grid {
+    gap: 60px; /* extra room for badge below image */
+  }
+  .mission-visual {
+    height: 240px;
+    margin-bottom: 20px;
+  }
+  .badge-1 {
+    width: 120px;
+    bottom: -48px;
+    right: 0;
+  }
+  .team-grid-pro {
+    grid-template-columns: 1fr;
+  }
+  .tcp-img-wrap {
+    height: 180px;
+  }
+  .tcp-body {
+    padding: 16px 15px 18px;
+  }
+  .tcp-body h3 {
+    font-size: 0.98rem;
+  }
+  .tcp-badges {
+    gap: 5px;
+  }
+  .tcp-badges span {
+    font-size: 0.72rem;
+    padding: 3px 10px;
+  }
+  .doctors-extra h3 {
+    font-size: 1rem;
+  }
+  .doctor-mini {
+    gap: 12px;
+    padding: 14px;
+  }
+  .dm-img {
+    width: 54px;
+    height: 54px;
+  }
+  .dm-info strong {
+    font-size: 0.88rem;
+  }
+  .dm-info p {
+    font-size: 0.78rem;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .value-card {
+    padding: 24px 18px;
+  }
+  .stats-bar {
+    grid-template-columns: 1fr;
+  }
+  .sbar-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+  .timeline {
+    padding-left: 18px;
+  }
+  .timeline::before {
+    left: 12px;
+  }
+  .tl-dot {
+    left: -19px;
+  }
+  .tl-card {
+    padding: 16px 18px;
+  }
+  .tl-year {
+    font-size: 0.75rem;
+  }
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+}
