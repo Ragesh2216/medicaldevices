@@ -30,36 +30,54 @@
 
   <!-- NAVBAR -->
   <nav class="navbar nav-dark" id="navbar">
-        <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">
-                <span class="logo-icon">✚</span> Stackly
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="devices.html"  class="nav-link">Devices</a></li>
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">✚</span> Stackly
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown">
+          <a href="index.html" class="nav-link active dropdown-trigger">
+            Home <i data-lucide="chevron-down" style="width:16px;margin-left:4px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            
+            <a href="home2.html">Home 2</a>
+          </div>
+        </li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="devices.html" class="nav-link">Devices</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
-                
+
         <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
         <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a>
-                </li>
-            </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+        </li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" class="mobile-nav-link">Home</a>
-    <a href="about.html"     class="mobile-nav-link">About</a>
-    <a href="devices.html"   class="mobile-nav-link">Devices</a>
-    <a href="services.html"  class="mobile-nav-link">Services</a>
-    <a href="contact.html"   class="mobile-nav-link">Contact</a>
+    <div class="mobile-item-wrapper">
+      <div class="mobile-item-header">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <button class="mobile-dropdown-btn" id="mobileHomeToggle" aria-label="Toggle Home submenu"><span
+            class="dd-arrow"></span></button>
+      </div>
+      <div class="mobile-submenu" id="mobileHomeSubmenu">
+       
+        <a href="home2.html" class="mobile-sub-link">Home 2</a>
+      </div>
+    </div>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="devices.html" class="mobile-nav-link">Devices</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
     <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
-    <a href="login.html"     class="mobile-nav-link mobile-login">Login</a>
+    <a href="login.html" class="mobile-nav-link mobile-login">Login</a>
   </div>
 
   <!-- HERO -->
@@ -210,7 +228,7 @@
       <div class="products-grid">
         <div class="product-card reveal delay-1">
           <div class="product-img-wrap">
-            <img src="images/product_ventpro.webp" alt="VentPro X5 Ventilator" loading="lazy"/>
+            <img src="images/product_ventpro.webp" alt="VentPro X5 Ventilator" loading="lazy" />
           </div>
           <div class="product-body">
             <span class="product-cat">Respiratory</span>
@@ -221,7 +239,7 @@
         </div>
         <div class="product-card reveal delay-2">
           <div class="product-img-wrap">
-            <img src="images/product_cardio.webp" alt="CardioScan 360" loading="lazy"/>
+            <img src="images/product_cardio.webp" alt="CardioScan 360" loading="lazy" />
           </div>
           <div class="product-body">
             <span class="product-cat">Cardiology</span>
@@ -232,7 +250,7 @@
         </div>
         <div class="product-card reveal delay-3">
           <div class="product-img-wrap">
-            <img src="images/product_ortho.webp" alt="OrthoBot S2" loading="lazy"/>
+            <img src="images/product_ortho.webp" alt="OrthoBot S2" loading="lazy" />
           </div>
           <div class="product-body">
             <span class="product-cat">Orthopedics</span>
@@ -261,10 +279,11 @@
             <div class="tc-hospital">St. Luke's Medical Center</div>
           </div>
           <div class="quote-icon">"</div>
-          <p>"Stackly's CardioScan 360 has transformed our ICU workflow. Diagnosis time dropped by 40% in the first month alone. It's the most reliable device we've ever used."</p>
+          <p>"Stackly's CardioScan 360 has transformed our ICU workflow. Diagnosis time dropped by 40% in the first
+            month alone. It's the most reliable device we've ever used."</p>
           <div class="testimonial-author">
             <div class="author-photo">
-              <img src="images/partner_james.webp" alt="Dr. James Hoffman" loading="lazy"/>
+              <img src="images/partner_james.webp" alt="Dr. James Hoffman" loading="lazy" />
             </div>
             <div class="author-info">
               <strong>Dr. James Hoffman</strong>
@@ -280,10 +299,11 @@
             <div class="tc-hospital">Apollo Hospitals Group</div>
           </div>
           <div class="quote-icon">"</div>
-          <p>"The after-sales support from Stackly is truly unmatched. Engineers were on-site within hours every single time we needed assistance. World-class service."</p>
+          <p>"The after-sales support from Stackly is truly unmatched. Engineers were on-site within hours every single
+            time we needed assistance. World-class service."</p>
           <div class="testimonial-author">
             <div class="author-photo">
-              <img src="images/partner_priya.webp" alt="Dr. Priya Nair" loading="lazy"/>
+              <img src="images/partner_priya.webp" alt="Dr. Priya Nair" loading="lazy" />
             </div>
             <div class="author-info">
               <strong>Dr. Priya Nair</strong>
@@ -299,10 +319,11 @@
             <div class="tc-hospital">Royal General Hospital</div>
           </div>
           <div class="quote-icon">"</div>
-          <p>"We've outfitted our entire surgical wing with Stackly's OrthoBot S2. Patient outcomes are significantly better and our surgeons love the precision it delivers."</p>
+          <p>"We've outfitted our entire surgical wing with Stackly's OrthoBot S2. Patient outcomes are significantly
+            better and our surgeons love the precision it delivers."</p>
           <div class="testimonial-author">
             <div class="author-photo">
-              <img src="images/partner_marcus.webp" alt="Dr. Marcus Reid" loading="lazy"/>
+              <img src="images/partner_marcus.webp" alt="Dr. Marcus Reid" loading="lazy" />
             </div>
             <div class="author-info">
               <strong>Dr. Marcus Reid</strong>
@@ -383,6 +404,10 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
   <script src="main.js"></script>
 </body>
 

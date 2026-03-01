@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinical Innovations – Stackly Healthcare</title>
+  <meta name="description" content="Explore the deep clinical applications and real-world uses of Stackly's advanced medical technology." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="preloader.css" />
+  <link rel="stylesheet" href="home2.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>" />
+</head>
+
+<body class="innovations-page">
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo"><span class="logo-box">✚</span> Stackly</div>
+      <div class="preloader-spinner"></div>
+      <p class="preloader-text">Loading Innovations…</p>
+    </div>
+  </div>
+
+  <!-- NAVBAR (Same as Home2 special nav) -->
+  <nav class="navbar nav-dark" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">✚</span> Stackly
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown">
+          <a href="home2.html" class="nav-link dropdown-trigger">
+            Home2 <i data-lucide="chevron-down" style="width:16px;margin-left:4px;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html">Home</a>
+          </div>
+        </li>
+        <li><a href="innovations.html" class="nav-link active">Innovations</a></li>
+        <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-item-wrapper">
+      <div class="mobile-item-header">
+        <a href="home2.html" class="mobile-nav-link">Home2</a>
+        <button class="mobile-dropdown-btn" id="mobileHomeToggle" aria-label="Toggle Home submenu"><span
+            class="dd-arrow"></span></button>
+      </div>
+      <div class="mobile-submenu" id="mobileHomeSubmenu">
+        <a href="index.html" class="mobile-sub-link">Home</a>
+      </div>
+    </div>
+    <a href="innovations.html" class="mobile-nav-link active">Innovations</a>
+    <a href="login.html" class="mobile-nav-link mobile-login">Login</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="h2-hero innovation-hero">
+    <div class="h2-hero-bg">
+      <div class="h2-blob b1"></div>
+      <div class="h2-dot-pattern"></div>
+    </div>
+    <div class="container">
+      <div class="innovation-hero-content text-center reveal">
+        <span class="badge">Deep Dive</span>
+        <h1 class="h2-hero-title">Precision in <br/><span class="h2-gradient">Clinical Practice</span></h1>
+        <p class="h2-hero-sub" style="max-width:700px;margin-left:auto;margin-right:auto;">Discover how our core technologies are being utilized in high-stakes medical environments to redefine patient recovery and surgical excellence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="innovation-grid">
+        
+        <!-- Case 1: Robotics -->
+        <div class="inno-card reveal">
+          <div class="inno-img-box">
+            <img src="images/device_robot.webp" alt="Robotic Surgery" />
+            <div class="inno-label">Robotics</div>
+          </div>
+          <div class="inno-content">
+            <h3>Microsurgical Precision</h3>
+            <p>Our robotic systems are currently used in over 400 neurosurgical centers to provide haptic feedback during delicate tumor resections, reducing tissue trauma by up to 30%.</p>
+            <ul class="inno-list">
+              <li>0.1mm Accuracy</li>
+              <li>Real-time Haptic Feedback</li>
+              <li>Minimal Invasive Access</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Case 2: AI Imaging -->
+        <div class="inno-card reveal delay-1">
+          <div class="inno-img-box">
+            <img src="images/device_scan.webp" alt="AI Imaging" />
+            <div class="inno-label">AI Diagnostics</div>
+          </div>
+          <div class="inno-content">
+            <h3>Rapid Triage Protocols</h3>
+            <p>Utilized in Emergency Departments to automatically flag life-threatening anomalies in CT scans within seconds, prioritizing critical cases for immediate radiologist review.</p>
+            <ul class="inno-list">
+              <li>99.2% Detection Rate</li>
+              <li>Sub-second Analysis</li>
+              <li>Multi-modal Integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Case 3: Monitoring -->
+        <div class="inno-card reveal delay-2">
+          <div class="inno-img-box">
+            <img src="images/device_monitor.webp" alt="ICU Monitoring" />
+            <div class="inno-label">Monitoring</div>
+          </div>
+          <div class="inno-content">
+            <h3>Predictive ICU Monitoring</h3>
+            <p>Integrating vital stream data with predictive algorithms to alert clinical teams of potential sepsis onset 4-6 hours before visible symptoms occur.</p>
+            <ul class="inno-list">
+              <li>Early Warning System</li>
+              <li>Sepsis Prediction</li>
+              <li>Centralized Nursing Dashboard</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEEP TECH SECTION -->
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="h2-highlight-grid">
+        <div class="h2-hi-img reveal-left">
+          <img src="images/dash_chart.webp" alt="Analytics" />
+        </div>
+        <div class="h2-hi-text reveal-right">
+          <span class="section-tag">The Architecture</span>
+          <h2 class="section-title text-left">How It Works Under the Hood</h2>
+          <p>Our platform doesn't just collect data—it synthesizes clinical intelligence. By leveraging a distributed edge-computing network, we ensure medical devices process critical alerts locally while syncing deep insights to the cloud for historical analysis.</p>
+          <div class="tech-specs-grid">
+            <div class="tech-spec">
+              <strong>99.99%</strong>
+              <span>Uptime Guarantee</span>
+            </div>
+            <div class="tech-spec">
+              <strong>AES-256</strong>
+              <span>Encryption</span>
+            </div>
+            <div class="tech-spec">
+               <strong>HL7/FHIR</strong>
+               <span>Native Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name"><span class="brand-icon">✚</span> Stackly</div>
+          <p>Pioneering medical device innovation for over 25 years, trusted by healthcare professionals on every
+            continent.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="devices.html">Devices</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="home2.html">Healthcare Solutions</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="services.html">Cardiology</a>
+          <a href="services.html">Diagnostics</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@stackly.com">info@stackly.com</a>
+          <a href="tel:+18005550199">+1 800 555 0199</a>
+          <a href="404.html">123 MedTech Ave, Boston MA</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Stackly. All rights reserved.</span>
+        <div class="social-icons">
+          <a href="404.html" class="social-icon">𝕏</a>
+          <a href="404.html" class="social-icon">in</a>
+          <a href="404.html" class="social-icon">f</a>
+          <a href="404.html" class="social-icon">▶</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="main.js"></script>
+</body>
+</html>

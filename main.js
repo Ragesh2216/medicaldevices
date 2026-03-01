@@ -61,23 +61,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Desktop dropdown: JS click fallback (touch devices don't have :hover) */
-  const homeDropdown = document.getElementById('homeDropdown');
-  if (homeDropdown) {
-    homeDropdown.querySelector('.dropdown-trigger').addEventListener('click', (e) => {
-      // Only intercept on touch / small screens — let href work on desktop hover
-      if (window.matchMedia('(hover: none)').matches) {
-        e.preventDefault();
-        homeDropdown.classList.toggle('open');
-      }
+  /* Desktop dropdown: click-based toggle for all dropdowns */
+  document.querySelectorAll('.dropdown').forEach(dd => {
+    const trigger = dd.querySelector('.dropdown-trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dd.classList.toggle('open');
+      // Close all other dropdowns
+      document.querySelectorAll('.dropdown').forEach(other => {
+        if (other !== dd) other.classList.remove('open');
+      });
     });
-    // Close on outside click
-    document.addEventListener('click', (e) => {
-      if (!homeDropdown.contains(e.target)) {
-        homeDropdown.classList.remove('open');
-      }
+
+    // Close when a dropdown item is clicked
+    dd.querySelectorAll('.dropdown-menu a').forEach(item => {
+      item.addEventListener('click', () => dd.classList.remove('open'));
     });
-  }
+  });
+
+  // Close desktop dropdowns on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown.open').forEach(dd => {
+        dd.classList.remove('open');
+      });
+    }
+  });
 
   /* Close mobile menu on desktop resize */
   window.addEventListener('resize', () => {

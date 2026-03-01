@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -35,14 +35,21 @@
                 <span class="logo-icon">✚</span> Stackly
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html" class="nav-link dropdown-trigger">
+                        Home <i data-lucide="chevron-down" style="width:16px;margin-left:4px;"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                       
+                        <a href="home2.html">Home 2</a>
+                    </div>
+                </li>
                 <li><a href="about.html" class="nav-link active">About</a></li>
-                <li><a href="devices.html"  class="nav-link">Devices</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-                
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="devices.html" class="nav-link">Devices</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-        <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a>
+                <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a>
                 </li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
@@ -51,16 +58,25 @@
         </div>
     </nav>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" class="mobile-nav-link">Home</a>
-    <a href="about.html"     class="mobile-nav-link">About</a>
-    <a href="devices.html"   class="mobile-nav-link">Devices</a>
-    <a href="services.html"  class="mobile-nav-link">Services</a>
-    <a href="contact.html"   class="mobile-nav-link">Contact</a>
-    <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
-    <a href="login.html"     class="mobile-nav-link mobile-login">Login</a>
-  </div>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-item-wrapper">
+            <div class="mobile-item-header">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <button class="mobile-dropdown-btn" id="mobileHomeToggle" aria-label="Toggle Home submenu"><span
+                        class="dd-arrow"></span></button>
+            </div>
+            <div class="mobile-submenu" id="mobileHomeSubmenu">
+                <a href="home2.html" class="mobile-sub-link">Home 2</a>
+            </div>
+        </div>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="devices.html" class="mobile-nav-link">Devices</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+        <a href="login.html" class="mobile-nav-link mobile-login">Login</a>
+    </div>
 
     <!-- PAGE HERO -->
     <header class="page-hero">
@@ -96,20 +112,19 @@
                     </div>
                 </div>
                 <div class="mission-visual reveal-right">
-          <div class="mission-img-main">
-            <img src="images/about_team.webp" alt="Stackly Medical Team" loading="lazy"/>
-          </div>
-          <div class="mission-img-badge badge-1">
-            <div class="vc-icon">👥</div>
-            <strong>2,800+</strong>
-            <small>Employees Worldwide</small>
-          </div>
-          <div class="mission-img-badge badge-2">
-            <div class="vc-icon">🌐</div>
-            <strong>60+</strong>
-            <small>Countries Served</small>
-          </div>
-        </div>
+                    <div class="mission-img-main">
+                        <img src="images/about_team.webp" alt="Stackly Medical Team" loading="lazy" />
+                    </div>
+                    <div class="mission-img-badge badge-1">
+                        <div class="vc-icon">👥</div>
+                        <strong>2,800+</strong>
+                        <small>Employees Worldwide</small>
+                    </div>
+                    <div class="mission-img-badge badge-2">
+                        <div class="vc-icon">🌐</div>
+                        <strong>60+</strong>
+                        <small>Countries Served</small>
+                    </div>
                 </div>
             </div>
         </div>
@@ -214,13 +229,14 @@
             <div class="text-center reveal">
                 <span class="section-tag">Leadership Team</span>
                 <h2 class="section-title">Meet the Minds Behind Stackly</h2>
-                <p class="section-sub">World-class clinicians and engineers united by a single mission — better devices, better care.</p>
+                <p class="section-sub">World-class clinicians and engineers united by a single mission — better devices,
+                    better care.</p>
             </div>
             <div class="team-grid-pro">
 
                 <div class="team-card-pro reveal delay-1">
                     <div class="tcp-img-wrap">
-                        <img src="images/doctor_alan.webp" alt="Dr. Alan Brooks – CEO" loading="lazy"/>
+                        <img src="images/doctor_alan.webp" alt="Dr. Alan Brooks – CEO" loading="lazy" />
                         <div class="tcp-overlay">
                             <a href="404.html" class="tcp-social">in</a>
                             <a href="404.html" class="tcp-social">𝕏</a>
@@ -229,7 +245,8 @@
                     <div class="tcp-body">
                         <span class="tcp-tag">Chief Executive Officer</span>
                         <h3>Dr. Alan Brooks</h3>
-                        <p>Former Johns Hopkins neurosurgeon with 20+ years in medical device commercialization and health-tech leadership.</p>
+                        <p>Former Johns Hopkins neurosurgeon with 20+ years in medical device commercialization and
+                            health-tech leadership.</p>
                         <div class="tcp-badges">
                             <span>🧠 Neurosurgery</span>
                             <span>📈 Strategy</span>
@@ -239,7 +256,7 @@
 
                 <div class="team-card-pro reveal delay-2">
                     <div class="tcp-img-wrap">
-                        <img src="images/doctor_sarah.webp" alt="Dr. Sarah Chen – CTO" loading="lazy"/>
+                        <img src="images/doctor_sarah.webp" alt="Dr. Sarah Chen – CTO" loading="lazy" />
                         <div class="tcp-overlay">
                             <a href="404.html" class="tcp-social">in</a>
                             <a href="404.html" class="tcp-social">𝕏</a>
@@ -248,7 +265,8 @@
                     <div class="tcp-body">
                         <span class="tcp-tag">Chief Technology Officer</span>
                         <h3>Dr. Sarah Chen</h3>
-                        <p>MIT Biomedical Engineering PhD, holds 32 patents in surgical robotics and AI-assisted diagnostics.</p>
+                        <p>MIT Biomedical Engineering PhD, holds 32 patents in surgical robotics and AI-assisted
+                            diagnostics.</p>
                         <div class="tcp-badges">
                             <span>🤖 Robotics</span>
                             <span>🔬 AI/ML</span>
@@ -258,7 +276,7 @@
 
                 <div class="team-card-pro reveal delay-3">
                     <div class="tcp-img-wrap">
-                        <img src="images/doctor_maya.webp" alt="Maya Patel – COO" loading="lazy"/>
+                        <img src="images/doctor_maya.webp" alt="Maya Patel – COO" loading="lazy" />
                         <div class="tcp-overlay">
                             <a href="404.html" class="tcp-social">in</a>
                             <a href="404.html" class="tcp-social">𝕏</a>
@@ -267,7 +285,8 @@
                     <div class="tcp-body">
                         <span class="tcp-tag">Chief Operating Officer</span>
                         <h3>Maya Patel</h3>
-                        <p>15 years optimizing global healthcare supply chains and hospital procurement across 40+ countries.</p>
+                        <p>15 years optimizing global healthcare supply chains and hospital procurement across 40+
+                            countries.</p>
                         <div class="tcp-badges">
                             <span>🌍 Operations</span>
                             <span>🏥 Procurement</span>
@@ -277,7 +296,7 @@
 
                 <div class="team-card-pro reveal delay-4">
                     <div class="tcp-img-wrap">
-                        <img src="images/doctor_ravi.webp" alt="Dr. Ravi Sharma – R&D Head" loading="lazy"/>
+                        <img src="images/doctor_ravi.webp" alt="Dr. Ravi Sharma – R&D Head" loading="lazy" />
                         <div class="tcp-overlay">
                             <a href="404.html" class="tcp-social">in</a>
                             <a href="404.html" class="tcp-social">𝕏</a>
@@ -286,7 +305,8 @@
                     <div class="tcp-body">
                         <span class="tcp-tag">Head of R&amp;D</span>
                         <h3>Dr. Ravi Sharma</h3>
-                        <p>Award-winning researcher, 18 peer-reviewed publications, pioneering next-gen AI diagnostic systems.</p>
+                        <p>Award-winning researcher, 18 peer-reviewed publications, pioneering next-gen AI diagnostic
+                            systems.</p>
                         <div class="tcp-badges">
                             <span>📊 Analytics</span>
                             <span>💉 Diagnostics</span>
@@ -298,11 +318,13 @@
 
             <!-- EXTRA DOCTORS ROW -->
             <div class="doctors-extra reveal" style="margin-top:40px">
-                <h3 class="text-center" style="font-size:1.1rem;font-weight:700;color:var(--text-dark);margin-bottom:28px;">Our Senior Medical Advisors</h3>
+                <h3 class="text-center"
+                    style="font-size:1.1rem;font-weight:700;color:var(--text-dark);margin-bottom:28px;">Our Senior
+                    Medical Advisors</h3>
                 <div class="doctors-row">
                     <div class="doctor-mini reveal delay-1">
                         <div class="dm-img">
-                            <img src="images/doctor_5.webp" alt="Dr. Lisa Turner" loading="lazy"/>
+                            <img src="images/doctor_5.webp" alt="Dr. Lisa Turner" loading="lazy" />
                         </div>
                         <div class="dm-info">
                             <strong>Dr. Lisa Turner</strong>
@@ -312,29 +334,30 @@
                     </div>
                     <div class="doctor-mini reveal delay-2">
                         <div class="dm-img">
-                            <img src="images/doctor_6.webp" alt="Dr. Kevin Walsh" loading="lazy"/>
+                            <img src="images/doctor_6.webp" alt="Dr. Kevin Walsh" loading="lazy" />
                         </div>
                         <div class="dm-info">
                             <strong>Dr. Kevin Walsh</strong>
                             <span>Orthopedic Surgeon</span>
-                            <p>Lead clinical evaluator for OrthoBot S2, specialist in robotic-assisted joint replacement.</p>
+                            <p>Lead clinical evaluator for OrthoBot S2, specialist in robotic-assisted joint
+                                replacement.</p>
                         </div>
                     </div>
                     <div class="doctor-mini reveal delay-3">
                         <div class="dm-img">
-                            <img src="images/doctor_alan.webp" alt="Dr. Emma Ross" loading="lazy"/>
+                            <img src="images/doctor_alan.webp" alt="Dr. Emma Ross" loading="lazy" />
                         </div>
                         <div class="dm-info">
                             <strong>Dr. Emma Ross</strong>
                             <span>Respiratory Specialist</span>
-                            <p>Expert in critical care ventilation and clinical lead for the VentPro X5 deployment program.</p>
+                            <p>Expert in critical care ventilation and clinical lead for the VentPro X5 deployment
+                                program.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- STATS BAR -->
     <section class="about-stats">
@@ -402,6 +425,10 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
     <script src="main.js"></script>
 </body>
 

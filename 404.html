@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -98,14 +98,22 @@
                 <span class="logo-icon">✚</span> Stackly
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html" class="nav-link dropdown-trigger">
+                        Home <i data-lucide="chevron-down" style="width:16px;margin-left:4px;"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home</a>
+                        <a href="home2.html">Home 2</a>
+                    </div>
+                </li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="devices.html"  class="nav-link">Devices</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-                
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="devices.html" class="nav-link">Devices</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-        <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a>
+                <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a>
                 </li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
@@ -114,16 +122,26 @@
         </div>
     </nav>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" class="mobile-nav-link">Home</a>
-    <a href="about.html"     class="mobile-nav-link">About</a>
-    <a href="devices.html"   class="mobile-nav-link">Devices</a>
-    <a href="services.html"  class="mobile-nav-link">Services</a>
-    <a href="contact.html"   class="mobile-nav-link">Contact</a>
-    <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
-    <a href="login.html"     class="mobile-nav-link mobile-login">Login</a>
-  </div>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-item-wrapper">
+            <div class="mobile-item-header">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <button class="mobile-dropdown-btn" id="mobileHomeToggle" aria-label="Toggle Home submenu"><span
+                        class="dd-arrow"></span></button>
+            </div>
+            <div class="mobile-submenu" id="mobileHomeSubmenu">
+                <a href="index.html" class="mobile-sub-link">Home</a>
+                <a href="home2.html" class="mobile-sub-link">Home 2</a>
+            </div>
+        </div>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="devices.html" class="mobile-nav-link">Devices</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+        <a href="login.html" class="mobile-nav-link mobile-login">Login</a>
+    </div>
 
     <main class="not-found-page" style="padding-top:calc(var(--nav-height) + 40px)">
         <div class="nf-inner">
@@ -147,6 +165,10 @@
         </div>
     </main>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
     <script src="main.js"></script>
 </body>
 

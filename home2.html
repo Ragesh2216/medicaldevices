@@ -1,15 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home 2 – Stackly Healthcare Solutions</title>
-  <meta name="description" content="Stackly's alternative healthcare-focused landing page — patient care technology, hospital solutions, and clinical innovation."/>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="preloader.css"/>
-  <link rel="stylesheet" href="home2.css"/>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>"/>
+  <meta name="description"
+    content="Stackly's alternative healthcare-focused landing page — patient care technology, hospital solutions, and clinical innovation." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="preloader.css" />
+  <link rel="stylesheet" href="home2.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>" />
 </head>
+
 <body>
 
   <!-- PRELOADER -->
@@ -29,32 +33,16 @@
       </a>
       <ul class="nav-links" id="navLinks">
         <li class="dropdown">
-          <a href="index.html" class="nav-link dropdown-trigger">
-            Home <span class="dd-chevron">&#8964;</span>
+          <a href="home2.html" class="nav-link active dropdown-trigger">
+            Home2 <i data-lucide="chevron-down" style="width:16px;margin-left:4px;"></i>
           </a>
           <div class="dropdown-menu">
-            <a href="index.html" class="dropdown-item">
-              <div class="dd-item-icon">🏠</div>
-              <div class="dd-item-text">
-                <strong>Main Home</strong>
-                <span>Products, features &amp; testimonials</span>
-              </div>
-            </a>
-            <a href="home2.html" class="dropdown-item">
-              <div class="dd-item-icon">💊</div>
-              <div class="dd-item-text">
-                <strong>Healthcare Solutions</strong>
-                <span>Patient care &amp; hospital innovation</span>
-              </div>
-            </a>
+            <a href="index.html">Home</a>
           </div>
         </li>
-        <li><a href="about.html"     class="nav-link">About</a></li>
-        <li><a href="devices.html"   class="nav-link">Devices</a></li>
-        <li><a href="services.html"  class="nav-link">Services</a></li>
-        <li><a href="contact.html"   class="nav-link">Contact</a></li>
-        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-        <li><a href="login.html"     class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a></li>
+        <li><a href="innovations.html" class="nav-link">Innovations</a></li>
+        
+        <li><a href="login.html" class="nav-link nav-cta btn btn-primary" style="padding:10px 22px;">Login</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
         <span></span><span></span><span></span>
@@ -64,13 +52,19 @@
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" class="mobile-nav-link">Home</a>
-    <a href="about.html"     class="mobile-nav-link">About</a>
-    <a href="devices.html"   class="mobile-nav-link">Devices</a>
-    <a href="services.html"  class="mobile-nav-link">Services</a>
-    <a href="contact.html"   class="mobile-nav-link">Contact</a>
-    <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
-    <a href="login.html"     class="mobile-nav-link mobile-login">Login</a>
+    <div class="mobile-item-wrapper">
+      <div class="mobile-item-header">
+        <a href="home2.html" class="mobile-nav-link">Home2</a>
+        <button class="mobile-dropdown-btn" id="mobileHomeToggle" aria-label="Toggle Home submenu"><span
+            class="dd-arrow"></span></button>
+      </div>
+      <div class="mobile-submenu" id="mobileHomeSubmenu">
+        <a href="index.html" class="mobile-sub-link">Home</a>
+      </div>
+    </div>
+    <a href="innovations.html" class="mobile-nav-link">Innovations</a>
+  
+    <a href="login.html" class="mobile-nav-link mobile-login">Login</a>
   </div>
 
   <!-- HERO -->
@@ -82,18 +76,18 @@
     </div>
     <div class="container h2-hero-inner">
       <div class="h2-hero-content">
-        <span class="badge">💊 Healthcare Solutions</span>
-        <h1 class="h2-hero-title">Empowering<br/><span class="h2-gradient">Patient-Centered</span><br/>Healthcare</h1>
-        <p class="h2-hero-sub">Stackly bridges the gap between clinical teams and cutting-edge technology — delivering seamless care, better outcomes, and measurable impact for every patient.</p>
+        <span class="badge">🔬 Clinical Innovation</span>
+        <h1 class="h2-hero-title">Shaping the<br /><span class="h2-gradient">Future of Care</span><br />Through Science</h1>
+        <p class="h2-hero-sub">Where engineering meets empathy. At Stackly, we're not just building devices; we're architecting the next era of precision medicine and clinical intelligence.</p>
         <div class="h2-hero-actions">
-          <a href="contact.html" class="btn btn-primary">Get Started Today</a>
-          <a href="services.html" class="btn btn-outline">Explore Services &rarr;</a>
+          <a href="#lab" class="btn btn-primary">Enter the R&D Lab</a>
+          <a href="services.html" class="btn btn-outline">Innovation Brief &rarr;</a>
         </div>
         <div class="h2-trust">
           <div class="h2-trust-avatars">
-            <img src="images/doctor_alan.webp"  alt="Doctor" class="trust-avatar"/>
-            <img src="images/doctor_sarah.webp" alt="Doctor" class="trust-avatar"/>
-            <img src="images/doctor_maya.webp"  alt="Doctor" class="trust-avatar"/>
+            <img src="images/doctor_alan.webp" alt="Doctor" class="trust-avatar" />
+            <img src="images/doctor_sarah.webp" alt="Doctor" class="trust-avatar" />
+            <img src="images/doctor_maya.webp" alt="Doctor" class="trust-avatar" />
           </div>
           <p><strong>500+ hospitals</strong> trust Stackly worldwide</p>
         </div>
@@ -101,7 +95,7 @@
       <div class="h2-hero-visual">
         <div class="h2-card-wrap">
           <div class="h2-main-img">
-            <img src="images/dash_patient.webp" alt="Patient care" loading="eager"/>
+            <img src="images/dash_patient.webp" alt="Patient care" loading="eager" />
           </div>
           <div class="h2-float-card fc1">
             <span class="fc-icon">❤️</span>
@@ -120,46 +114,79 @@
     </div>
   </section>
 
-  <!-- SOLUTIONS GRID -->
-  <section class="section" id="solutions">
+  <!-- R&D LAB SHOWCASE -->
+  <section class="section" id="lab">
     <div class="container">
       <div class="text-center reveal">
-        <span class="section-tag">Our Solutions</span>
-        <h2 class="section-title">Healthcare Technology That Works</h2>
-        <p class="section-sub">End-to-end solutions designed for hospitals, clinics, and healthcare networks of every size.</p>
+        <span class="section-tag">R&D Discovery</span>
+        <h2 class="section-title">The Lab: Where Ideas Pulse</h2>
+        <p class="section-sub">Peek into our innovation corridors where the next generation of healthcare is being prototyped.</p>
       </div>
-      <div class="h2-solutions-grid">
-        <div class="h2-sol-card reveal delay-1">
-          <div class="h2-sol-img">
-            <img src="images/cardiology.webp" alt="Cardiac Care" loading="lazy"/>
+      <div class="h2-lab-grid">
+        <div class="h2-lab-card reveal delay-1">
+          <div class="h2-lab-img">
+            <img src="images/device_robot.webp" alt="Surgical Prototyping" loading="lazy" />
+            <div class="lab-status">Active Prototype</div>
           </div>
-          <div class="h2-sol-body">
-            <div class="card-icon">❤️</div>
-            <h3>Cardiac Care Suite</h3>
-            <p>AI-powered cardiac monitoring, 12-lead ECG, and real-time arrhythmia alerts integrated into your EMR workflow.</p>
-            <a href="services.html" class="btn btn-outline-dark" style="padding:9px 22px;font-size:.85rem;margin-top:12px;">Learn More</a>
-          </div>
-        </div>
-        <div class="h2-sol-card reveal delay-2">
-          <div class="h2-sol-img">
-            <img src="images/about_team.webp" alt="Clinical Teams" loading="lazy"/>
-          </div>
-          <div class="h2-sol-body">
-            <div class="card-icon">👨‍⚕️</div>
-            <h3>Clinical Team Support</h3>
-            <p>Training programs, 24/7 technical support, and dedicated clinical advisors for every Stackly device deployment.</p>
-            <a href="contact.html" class="btn btn-outline-dark" style="padding:9px 22px;font-size:.85rem;margin-top:12px;">Contact Us</a>
+          <div class="h2-lab-body">
+            <h3>SurgiBot Nano-Vision</h3>
+            <p>Advancing sub-micron visual haptics for neurosurgical simulators.</p>
           </div>
         </div>
-        <div class="h2-sol-card reveal delay-3">
-          <div class="h2-sol-img">
-            <img src="images/diagnostics.webp" alt="Diagnostics" loading="lazy"/>
+        <div class="h2-lab-card reveal delay-2">
+          <div class="h2-lab-img">
+            <img src="images/device_lab.webp" alt="Bio-materials" loading="lazy" />
+            <div class="lab-status">Testing Phase</div>
           </div>
-          <div class="h2-sol-body">
-            <div class="card-icon">🔬</div>
-            <h3>Diagnostic Intelligence</h3>
-            <p>AI-enhanced imaging and lab analytics delivering sub-millimeter precision and automated radiologist-grade reports.</p>
-            <a href="devices.html" class="btn btn-outline-dark" style="padding:9px 22px;font-size:.85rem;margin-top:12px;">View Devices</a>
+          <div class="h2-lab-body">
+            <h3>Bio-Dynamic Implants</h3>
+            <p>Researching adaptive titanium polymers that mimic natural bone density.</p>
+          </div>
+        </div>
+        <div class="h2-lab-card reveal delay-3">
+          <div class="h2-lab-img">
+            <img src="images/dash_chart.webp" alt="AI Research" loading="lazy" />
+            <div class="lab-status">Cloud Syncing</div>
+          </div>
+          <div class="h2-lab-body">
+            <h3>NeuralECHO AI</h3>
+            <p>Deep-learning algorithms trained on 40M+ cardiac waveforms for predictive triage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT SECTION -->
+  <section class="section alt-bg" id="impact">
+    <div class="container">
+      <div class="h2-impact-wrap">
+        <div class="h2-impact-text reveal">
+          <span class="section-tag">Global Impact</span>
+          <h2 class="section-title text-left">Real Impact on Real Lives</h2>
+          <p class="section-sub text-left">Our technology spans 60 countries, but our focus is always on the individual clinical team and the patient on the table.</p>
+          
+          <div class="impact-stats">
+            <div class="is-item">
+              <strong>12M+</strong>
+              <span>Scans Analyzed</span>
+            </div>
+            <div class="is-item">
+              <strong>85k</strong>
+              <span>Surgeries Assisted</span>
+            </div>
+            <div class="is-item">
+              <strong>94%</strong>
+              <span>Clinical Efficiency Gain</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:20px;">Collaborate With Us</a>
+        </div>
+        <div class="h2-impact-visual reveal-right">
+          <img src="images/hero_medical.webp" alt="Global Impact" class="impact-main-img" />
+          <div class="impact-floating-badge">
+            <span class="badge-icon">🌍</span>
+            <span>6 Continents</span>
           </div>
         </div>
       </div>
@@ -195,7 +222,7 @@
     <div class="container">
       <div class="h2-highlight-grid">
         <div class="h2-hi-img reveal-left">
-          <img src="images/dash_chart.webp" alt="Analytics dashboard" loading="lazy"/>
+          <img src="images/dash_chart.webp" alt="Analytics dashboard" loading="lazy" />
           <div class="h2-hi-badge">
             <span>📈</span> Real-time analytics
           </div>
@@ -203,7 +230,9 @@
         <div class="h2-hi-text reveal-right">
           <span class="section-tag">AI-Powered Platform</span>
           <h2 class="section-title text-left">Stackly AI: Decisions That Save Lives</h2>
-          <p style="color:var(--text-mid);margin-top:16px;line-height:1.85;">Our machine learning platform processes device data from across your hospital in real time — flagging anomalies, predicting deterioration, and surfacing actionable insights to clinical teams before emergencies occur.</p>
+          <p style="color:var(--text-mid);margin-top:16px;line-height:1.85;">Our machine learning platform processes
+            device data from across your hospital in real time — flagging anomalies, predicting deterioration, and
+            surfacing actionable insights to clinical teams before emergencies occur.</p>
           <ul class="h2-feat-list">
             <li><span>🧠</span> Early warning sepsis and deterioration detection</li>
             <li><span>📊</span> Predictive device maintenance alerts</li>
@@ -212,7 +241,7 @@
           </ul>
           <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;">
             <a href="dashboard.html" class="btn btn-primary">View Dashboard Demo</a>
-            <a href="contact.html"   class="btn btn-outline-dark">Request a Pilot</a>
+            <a href="contact.html" class="btn btn-outline-dark">Request a Pilot</a>
           </div>
         </div>
       </div>
@@ -229,36 +258,39 @@
       <div class="h2-testimonials">
         <div class="h2-tcard reveal delay-1">
           <div class="h2-tcard-top">
-            <img src="images/partner_james.webp" alt="Dr. James Hoffman" class="h2-tcard-photo"/>
+            <img src="images/partner_james.webp" alt="Dr. James Hoffman" class="h2-tcard-photo" />
             <div>
               <strong>Dr. James Hoffman</strong>
               <span>Head of Cardiology, St. Luke's</span>
               <div style="color:#f59e0b;letter-spacing:2px;font-size:.85rem;margin-top:3px;">★★★★★</div>
             </div>
           </div>
-          <p>"Stackly's AI platform cut our ICU turnaround time by 40%. The data it surfaces has genuinely changed how we make clinical decisions."</p>
+          <p>"Stackly's AI platform cut our ICU turnaround time by 40%. The data it surfaces has genuinely changed how
+            we make clinical decisions."</p>
         </div>
         <div class="h2-tcard reveal delay-2">
           <div class="h2-tcard-top">
-            <img src="images/partner_priya.webp" alt="Dr. Priya Nair" class="h2-tcard-photo"/>
+            <img src="images/partner_priya.webp" alt="Dr. Priya Nair" class="h2-tcard-photo" />
             <div>
               <strong>Dr. Priya Nair</strong>
               <span>CMO, Apollo Hospitals Group</span>
               <div style="color:#f59e0b;letter-spacing:2px;font-size:.85rem;margin-top:3px;">★★★★★</div>
             </div>
           </div>
-          <p>"From installation to live deployment in 48 hours — Stackly's onboarding team was extraordinary. We've never seen a rollout that smooth."</p>
+          <p>"From installation to live deployment in 48 hours — Stackly's onboarding team was extraordinary. We've
+            never seen a rollout that smooth."</p>
         </div>
         <div class="h2-tcard reveal delay-3">
           <div class="h2-tcard-top">
-            <img src="images/partner_marcus.webp" alt="Dr. Marcus Reid" class="h2-tcard-photo"/>
+            <img src="images/partner_marcus.webp" alt="Dr. Marcus Reid" class="h2-tcard-photo" />
             <div>
               <strong>Dr. Marcus Reid</strong>
               <span>Chief Surgeon, Royal General</span>
               <div style="color:#f59e0b;letter-spacing:2px;font-size:.85rem;margin-top:3px;">★★★★★</div>
             </div>
           </div>
-          <p>"The OrthoBot S2 redefined what precision means in our surgical wing. Patient recovery times are measurably better across every metric."</p>
+          <p>"The OrthoBot S2 redefined what precision means in our surgical wing. Patient recovery times are measurably
+            better across every metric."</p>
         </div>
       </div>
     </div>
@@ -269,15 +301,19 @@
     <div class="container">
       <div class="cta-inner reveal">
         <span class="section-tag" style="color:rgba(255,255,255,.7)">Ready to Transform Care?</span>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:#fff;margin-bottom:16px;">
+        <h2
+          style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:#fff;margin-bottom:16px;">
           Bring Stackly to Your Hospital Today
         </h2>
-        <p style="color:rgba(255,255,255,.8);font-size:1.05rem;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;">
-          Schedule a free clinical consultation and see how Stackly's platform can transform your patient outcomes within 90 days.
+        <p
+          style="color:rgba(255,255,255,.8);font-size:1.05rem;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;">
+          Schedule a free clinical consultation and see how Stackly's platform can transform your patient outcomes
+          within 90 days.
         </p>
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-          <a href="contact.html"  class="btn btn-primary" style="background:#fff;color:var(--primary);">Book a Consultation</a>
-          <a href="devices.html"  class="btn btn-outline">Browse Devices</a>
+          <a href="contact.html" class="btn btn-primary" style="background:#fff;color:var(--primary);">Book a
+            Consultation</a>
+          <a href="devices.html" class="btn btn-outline">Browse Devices</a>
         </div>
       </div>
     </div>
@@ -289,7 +325,8 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="brand-name"><span class="brand-icon">✚</span> Stackly</div>
-          <p>Pioneering medical device innovation for over 25 years, trusted by healthcare professionals on every continent.</p>
+          <p>Pioneering medical device innovation for over 25 years, trusted by healthcare professionals on every
+            continent.</p>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -324,6 +361,11 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
   <script src="main.js"></script>
 </body>
+
 </html>
