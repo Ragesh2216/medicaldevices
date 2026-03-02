@@ -318,3 +318,11 @@
   .kpi-value { font-size: 1.3rem; }
   .dash-topbar h1 { font-size: 1.2rem; }
 }
+
+/* --- 340px tightening --- */
+@media (max-width: 340px) {
+  .kpi-grid { grid-template-columns: 1fr; gap: 10px; }
+  .kpi-value { font-size: 1.2rem; }
+  .dash-topbar h1 { font-size: 1.1rem; }
+  .dash-main { padding: 14px 12px 32px; }
+}

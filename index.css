@@ -584,3 +584,13 @@
 .hidden {
     display: none !important;
 }
+
+/* --- 320px Perfect Adjustments --- */
+@media (max-width: 340px) {
+    .hero {
+        padding-top: calc(var(--nav-height) + 24px);
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}

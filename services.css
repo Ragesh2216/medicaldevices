@@ -253,3 +253,17 @@
         padding: 10px 14px;
     }
 }
+/* --- 480px / 320px tightening --- */
+@media (max-width: 480px) {
+  .tab-content-grid { gap: 24px; }
+  .tab-img-wrap { height: 180px; }
+  .support-card { padding: 22px 16px; }
+  .services-cta { padding: 60px 0; }
+}
+
+@media (max-width: 340px) {
+  .tab-btn { font-size: 0.76rem; padding: 8px 10px; }
+  .tab-text h3 { font-size: 1.3rem; }
+  .step { padding: 20px 12px; }
+  .step-num { font-size: 1.8rem; }
+}

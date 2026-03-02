@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -67,6 +67,27 @@
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeUp 0.7s ease 0.3s both;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            background: transparent;
+            border: 2px solid var(--primary, #0d6efd);
+            color: var(--primary, #0d6efd);
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-back:hover {
+            background: var(--primary, #0d6efd);
+            color: #fff;
         }
 
         .nf-links {
@@ -153,7 +174,8 @@
                 Let's get you back on track.
             </p>
             <div class="nf-actions">
-                <a href="index.html" class="btn btn-primary">← Back to Home</a>
+                <button class="btn-back" onclick="history.back()">← Go Back</button>
+                <a href="index.html" class="btn btn-primary">🏠 Back to Home</a>
                 <a href="contact.html" class="btn btn-outline-dark">Contact Support</a>
             </div>
             <div class="nf-links">

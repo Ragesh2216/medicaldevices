@@ -359,3 +359,11 @@
         align-items: flex-start;
     }
 }
+/* --- 340px tightening --- */
+@media (max-width: 340px) {
+  .login-form-box { padding: 22px 14px; }
+  .form-row-2 { grid-template-columns: 1fr; }
+  .social-login { grid-template-columns: 1fr; }
+  .auth-tab { font-size: 0.82rem; padding: 8px; }
+  .lp-feat { padding: 10px 12px; font-size: 0.85rem; }
+}

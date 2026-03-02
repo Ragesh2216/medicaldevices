@@ -352,3 +352,25 @@
   .filter-bar { gap: 8px; }
   .filter-btn { font-size: 0.8rem; padding: 7px 16px; }
 }
+
+/* --- 480px / 320px tightening --- */
+@media (max-width: 480px) {
+  .devices-hero { padding-top: calc(var(--nav-height) + 32px); padding-bottom: 48px; }
+  .dh-inner h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+  .dh-inner p { font-size: 0.95rem; }
+  .dh-stats { gap: 10px; }
+  .dh-stat { padding: 12px 16px; min-width: 90px; }
+  .dh-stat strong { font-size: 1.4rem; }
+  .devices-highlight { padding: 56px 0; }
+  .devices-cta { padding: 56px 0; }
+}
+
+@media (max-width: 340px) {
+  .devices-hero { padding-top: calc(var(--nav-height) + 16px); padding-bottom: 36px; }
+  .dh-inner h1 { font-size: 1.6rem; }
+  .dh-inner p { font-size: 0.88rem; }
+  .dh-badges { gap: 8px; }
+  .dh-badge { font-size: 0.75rem; padding: 5px 12px; }
+  .filter-btn { font-size: 0.76rem; padding: 6px 12px; }
+  .dhl-img { height: 200px; }
+}
